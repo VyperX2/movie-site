@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
 ::-webkit-scrollbar {
 	width: 7px;
@@ -20,4 +21,8 @@
 
 .section {
 	@apply sm:mt-20 mt-8;
+}
+
+body {
+  font-family: 'roboto' ,Arial, Helvetica, sans-serif;
 }

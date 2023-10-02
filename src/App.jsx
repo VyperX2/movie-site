@@ -1,13 +1,16 @@
-import React from 'react'
-import Navbar from './components/Navbar'
+import React, { useState } from "react";
+import Navbar from "./components/Navbar";
+import MovieGallery from "./components/MovieGallery";
 
 const App = () => {
-  return (
-    <>
-      <Navbar />
+  const [darkMode , setDarkMode] = useState("")
 
-    </>
-  )
-}
+	return (
+		<div className={`${darkMode}`}>
+			<Navbar setDarkMode={setDarkMode} />
+      <MovieGallery />
+		</div>
+	);
+};
 
-export default App
+export default App;

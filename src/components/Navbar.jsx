@@ -3,15 +3,29 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import NavbarSearch from "./NavbarSearch";
-const Navbar = () => {
+const Navbar = ({ setDarkMode }) => {
 	return (
-		<div className="bg-sky-700 sm:w-[90%] ml-auto">
+		<div className=" bg-navbarbg dark:bg-black/80 ">
 			<nav className="container text-white h-20 flex flex-col sm:flex-row items-center py-2 justify-between">
 				<div className="sm:flex items-center justify-between w-full hidden ">
-					<Brightness4Icon />
+					<button
+						onClick={() =>
+							setDarkMode((prev) => {
+								if (prev === "") {
+									prev = "dark";
+									return prev;
+								} else {
+									prev = "";
+									return prev;
+								}
+							})
+						}
+					>
+						<Brightness4Icon />
+					</button>
 					<NavbarSearch />
 					<div className="flex items-center justify-center">
-						<span className=" text-sm">LOGIN</span>
+						<span className=" text-sm mr-2">LOGIN</span>
 						<AccountCircleIcon />
 					</div>
 				</div>
