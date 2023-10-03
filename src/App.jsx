@@ -1,15 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import MovieGallery from "./components/MovieGallery";
+import { MovieProvider } from "./context/MovieContext";
 
 const App = () => {
-  const [darkMode , setDarkMode] = useState("")
+	useEffect(() => {
+		localStorage.setItem("theme", "light");
+	}, []);
+
+	const [darkMode, setDarkMode] = useState(localStorage.getItem("theme"));
+
+	console.log(darkMode);
 
 	return (
-		<div className={`${darkMode}`}>
-			<Navbar setDarkMode={setDarkMode} />
-      <MovieGallery />
-		</div>
+		<MovieProvider>
+			<div className={`${darkMode}`}>
+				<Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
+				<MovieGallery />
+			</div>
+		</MovieProvider>
 	);
 };
 

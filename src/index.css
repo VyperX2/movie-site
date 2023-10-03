@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
 
 ::-webkit-scrollbar {
 	width: 7px;
@@ -19,10 +19,14 @@
 	@apply mx-auto max-w-sm  md:max-w-[768px] lg:max-w-[1024px] 2xl:max-w-[1536px] sm:px-16 px-6;
 }
 
+.container_two {
+	@apply mx-auto max-w-sm  md:max-w-[768px] lg:max-w-[1024px] 2xl:max-w-[1536px];
+}
+
 .section {
 	@apply sm:mt-20 mt-8;
 }
 
 body {
-  font-family: 'roboto' ,Arial, Helvetica, sans-serif;
+	font-family: "roboto", Arial, Helvetica, sans-serif;
 }
