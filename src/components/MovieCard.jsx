@@ -16,7 +16,7 @@ const MovieCard = ({ original_title, poster_path, id, movie }) => {
 				alt=""
 				className=" w-52 object-cover rounded-lg hover:scale-[1.05] mb-1 cursor-pointer transition-all"
 			/>
-			<h4 className=" text-2xl">{original_title}</h4>
+			<h4 className=" text-2xl">{original_title.substring(0,20)}</h4>
 		</div>
 	);
 };
