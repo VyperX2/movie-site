@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import { MovieProvider } from "./context/MovieContext";
-import MovieGallery from "./components/MovieGallery"
+import MovieGallery from "./components/MovieGallery";
 
 const App = () => {
 	useEffect(() => {

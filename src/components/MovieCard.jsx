@@ -13,10 +13,10 @@ const MovieCard = ({ original_title, poster_path, id, movie }) => {
 		>
 			<img
 				src={`https://image.tmdb.org/t/p/original//${poster_path}`}
-				alt=""
+				alt=" "
 				className=" w-52 object-cover rounded-lg hover:scale-[1.05] mb-1 cursor-pointer transition-all"
 			/>
-			<h4 className=" text-2xl">{original_title.substring(0,20)}</h4>
+			<h4 className=" text-2xl">{original_title.substring(0,18)}</h4>
 		</div>
 	);
 };
